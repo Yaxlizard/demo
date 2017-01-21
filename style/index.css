@@ -1,0 +1,128 @@
+
+#banner::after,
+#content::after,
+#author::after
+.article-row::after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+#banner {
+    clear: both;
+    background: url(../img/banner-bg2.jpg) no-repeat;
+    height: 500px;
+}
+
+#banner>div {
+    position: relative;
+    margin: 0 auto;
+    width: 980px;
+    height: 100%;
+}
+
+.bullet {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 10px 10px 30px;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: right;
+    color: #fff;
+    background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.4) 0%,
+    rgba(0,0,0,0.2) 25%,
+    rgba(0,0,0,0) 100%);
+    width: 320px;
+}
+
+.bullet>p {
+    text-indent: 2em;
+    text-align: left;
+    margin-bottom: 0;
+    font-size: 12px;
+}
+
+#content {
+    overflow: hidden;
+    background-color: #eee;
+}
+
+.article-row {
+    width: 980px;
+    margin: 10px auto 90px;
+    overflow: hidden;
+}
+
+article {
+    float: left;
+    font-size: 12px;
+    line-height: 1.7;
+    width: 320px;
+    background-color: #fff;
+    margin-bottom: -10000px;
+    padding-bottom: 10000px;
+}
+
+article:nth-of-type(2) {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.window {
+    overflow: hidden;
+    width: 300px;
+    height: 180px;
+    margin: 10px; 
+}
+
+.window img {
+    width: 100%;
+    height: auto;
+}
+
+.window img:hover {
+    transform: scale(1.1);
+    transition: .3s;
+}
+
+article>p {
+    text-indent: 2em;
+    margin: 0;
+    padding: 5px 30px 25px;
+}
+
+#author {
+    text-align: center;
+    font-family: "Century Gothic";
+}
+
+#author span {
+    font-size: 20px;
+    
+}
+
+
+.avatar img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin-top: -50px;
+    margin-bottom: 50px;
+}
+
+
+.about-me>p {
+    margin: 50px auto;
+    text-align: left;
+    text-indent: 2em;
+    font-size: 14px;
+    width: 600px;
+    height: 200px;
+}
+
+

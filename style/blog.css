@@ -1,0 +1,182 @@
+#container {
+    width: 980px;
+    margin: 0 auto;
+}
+
+#container::after,
+.search::after,
+.doc-list::after,
+.calendar::after {
+    content: ".";
+    line-height: 0;
+    display: block;
+    clear: both;
+    visibility: hidden;
+}
+
+.main {
+    float: left;
+    margin-right: 10px;
+    width: 685px;
+    box-sizing: border-box;
+}
+
+.side-bar {
+    float: left;
+    width: 285px;
+    box-sizing: border-box;
+}
+
+article {
+    padding: 20px 15px 15px;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+.side-tag {
+    float: left;
+    margin-left: -65px;
+    background-color: yellow;
+    width: 50px;
+    height: 70px;
+}
+
+.side-tag>div {
+    height: 50%;
+    color: #fff;
+    text-align: center;
+}
+
+.side-tag>div:first-child {
+    background-color: #334556;
+}
+
+.side-tag>div:last-child {
+    background-color: #466786;
+}
+
+.side-tag span {
+    line-height: 35px;
+}
+
+.primary {
+    color: #466786;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.secondary {
+    color: #666;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+article>p {
+    text-indent: 2em;
+    font-size: 12px;
+}
+
+.post-date {
+    font-size: 12px;
+    display: block;
+    text-align: right;
+    color: #999;
+}
+
+.search {
+    font-size: 0;   /*取消内联元素间距*/
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.search>input {
+    width: 195px;
+    height: 39px;
+    padding: 0 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.search>button {
+    vertical-align: bottom; /*下边考底部*/
+    width: 50px;
+    height: 39px;
+    color: #fff;
+    font-size: 15px;
+    background-color: #ddd;
+    border: 2px solid #ddd;
+    cursor: pointer;
+}
+
+.search>button:hover {
+    background-color: #d2c7d2;
+}
+
+.doc-list ul {
+    margin: 10px 0;
+}
+
+.doc-list li {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    margin: 1px 0;
+    padding-left: 16px;
+    line-height: 40px;
+    background-color: #fff;
+    border-left: 4px solid #6e7c88;
+    cursor: pointer;
+    color: #666;
+}
+
+.doc-list li:hover {
+    color: #000;
+}
+
+.calendar {
+    padding: 40px 30px;
+    font-size: 0;
+    background-color: #fff;
+}
+
+.bundle {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 0 10px;
+    color: #334556;
+}
+
+.bundle::before {
+    content: "<";
+    float: left;
+}
+
+.bundle::after {
+    content: ">";
+    float: right;
+}
+
+.chunk {
+    width: 100%;
+    color: #666;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.chunk span {
+    display: inline-block;
+    width: calc(100% / 7);
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.7;
+}
+
+
+
+
+

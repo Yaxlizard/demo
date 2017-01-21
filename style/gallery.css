@@ -1,0 +1,245 @@
+#container {
+    clear: both;
+    width: 980px;
+    margin: 0 auto;
+}
+
+#container::after,
+.main::after,
+.panels::after,
+.top-board::after {
+    content: ".";
+    line-height: 0;
+    display: block;
+    clear: both;
+    visibility: hidden;
+}
+
+.main {
+    float: left;
+    margin-right: 10px;
+    width: 685px;
+    box-sizing: border-box;
+    font-size: 0;
+}
+
+.main label {
+    display: inline-block;
+    margin-right: 1px;
+    font-size: 14px;
+    font-family: monospace;
+    height: 50px;
+    padding: 15px 20px 20px;
+    box-sizing: border-box;
+    border-right: 1px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+
+.main input {
+    display: none;  /*让元素不占据空间无法点击*/
+}
+
+.panels {
+    position: relative;
+    background-color: #fff;
+    margin-bottom: 30px;
+}
+
+.panel {
+    font-size: 14px;
+    padding: 20px;
+    display: none;
+}
+
+#one + label {
+    border-top: 4px solid #ead8ef;
+}
+
+#two + label {
+    border-top: 4px solid #dfc6e6;
+}
+
+#three + label {
+    border-top: 4px solid #d2a6ff;
+}
+
+#four + label {
+    border-top: 4px solid #ffa98c;
+}
+
+#five + label {
+    border-top: 4px solid #ffe188;
+}
+
+#one:checked + label {
+    border-top: 4px solid #7e5189;
+    border-bottom: 1px solid #fff;
+}
+
+#two:checked + label {
+    border-top: 4px solid #522a5c;
+    border-bottom: 1px solid #fff;
+}
+
+#three:checked + label {
+    border-top: 4px solid #5900b2;
+    border-bottom: 1px solid #fff;
+}
+
+#four:checked + label {
+    border-top: 4px solid #8c2300;
+    border-bottom: 1px solid #fff;
+}
+
+#five:checked + label {
+    border-top: 4px solid #d9a300;
+    border-bottom: 1px solid #fff;
+}
+
+#one:checked ~ .panels>.panel:nth-of-type(1),
+#two:checked ~ .panels>.panel:nth-of-type(2),
+#three:checked ~ .panels>.panel:nth-of-type(3),
+#four:checked ~ .panels>.panel:nth-of-type(4),
+#five:checked ~ .panels>.panel:nth-of-type(5) {
+
+    transition: .3s;    /*display:none到display:block设置后这个属性对渐变就无效了*/
+    display: block;     /*让其显示*/
+}
+
+.fall {
+    column-count: 3;
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+}
+
+.item {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    cursor: pointer;
+}
+
+.item>img {
+    width: 100%;
+}
+
+.summary {
+    position: absolute;
+    bottom: 0;
+    padding: 0 1em;
+    width: 100%;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 12px;
+    background-color: rgba(0,0,0,0.7);
+    cursor: initial;
+}
+
+.summary:hover {
+    padding: 1em 1em;
+    transition: .3s;
+}
+
+
+.side-bar {
+    float: left;
+    width: 285px;
+    box-sizing: border-box;
+}
+
+.search {
+    font-size: 0;   /*取消内联元素间距*/
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.search>input {
+    width: 195px;
+    height: 39px;
+    padding: 0 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.search>button {
+    vertical-align: bottom; /*下边考底部*/
+    width: 50px;
+    height: 39px;
+    color: #fff;
+    font-size: 15px;
+    background-color: #ddd;
+    border: 2px solid #ddd;
+    cursor: pointer;
+}
+
+.search>button:hover {
+    background-color: #d2c7d2;
+}
+
+.top-board {
+    overflow: hidden;
+    margin-top: 10px;
+    padding: 0 20px;
+    background-color: #fff;
+}
+
+.top-board>p {
+    color: #666;
+}
+
+.rank {
+    counter-reset: xxx 0;
+}
+
+.rank li {
+    margin: 10px 0;
+}
+
+
+.rank li::before {
+    display: inline-block;
+    text-align: center;
+    content: counter(xxx,decimal);
+    counter-increment: xxx 1;
+    border-radius: 50%;
+    background-color: #202a33;
+    color: #fff;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+}
+
+.rank-bar {
+    display: inline-block;
+    vertical-align: bottom; /*取消内联元素的地边距*/
+    box-sizing: border-box;
+    margin: 0 10px;
+    height: 17px;
+    width: 120px;
+    border: 1px solid #202a33;
+}
+
+.rank>li:nth-of-type(1)>span {
+    border-left: 120px solid #202a33;
+}
+.rank>li:nth-of-type(2)>span {
+    border-left: 100px solid #202a33;
+}
+.rank>li:nth-of-type(3)>span {
+    border-left: 70px solid #202a33;
+}
+.rank>li:nth-of-type(4)>span {
+    border-left: 50px solid #202a33;
+}
+.rank>li:nth-of-type(5)>span {
+    border-left: 30px solid #202a33;
+}
+
+
